@@ -1,0 +1,382 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.3rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md text-white;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  .btn-destructive {
+    @apply bg-destructive text-destructive-foreground;
+  }
+
+  .btn-muted {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary;
+  }
+
+  .btn-outline-primary {
+    @apply border-primary text-primary;
+  }
+
+  .btn-outline-secondary {
+    @apply border-secondary text-secondary;
+  }
+
+  .btn-outline-accent {
+    @apply border-accent text-accent;
+  }
+
+  .btn-outline-destructive {
+    @apply border-destructive text-destructive;
+  }
+
+  .btn-outline-muted {
+    @apply border-muted text-muted;
+  }
+
+  .btn-link {
+    @apply text-primary underline;
+  }
+
+  .btn-link-primary {
+    @apply text-primary underline;
+  }
+
+  .btn-link-secondary {
+    @apply text-secondary underline;
+  }
+
+  .btn-link-accent {
+    @apply text-accent underline;
+  }
+
+  .btn-link-destructive {
+    @apply text-destructive underline;
+  }
+
+  .btn-link-muted {
+    @apply text-muted underline;
+  }
+}
+
+.background-image {
+  background-image: url("../assets/manseeingdina.jpg");
+  background-position: center;
+}
+
+.background-image-2nd {
+  background-image: url("../assets/trail.jpg");
+  background-position: center;
+}
+
+.main-container {
+  background-image: url("../assets/robotfly.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+}
+
+.gradient--main {
+  background: #a6b1af; /* fallback for old browsers */
+
+  background: -webkit-linear-gradient(
+    to right,
+    #6fb1fc,
+    #4364f7,
+    #a6b1af
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6fb1fc,
+    #4364f7,
+    #a6b1af
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.text-transition {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.drawer-index {
+  z-index: 99999999999999999999999999999;
+  position: absolute;
+}
+
+.side-image-polka {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #e5e6f0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.polkaDotImage {
+  transition: transform 1s ease-in-out;
+  animation: upAndDown 5s infinite;
+}
+@keyframes upAndDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200px);
+  }
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.swiper {
+  width: 1000px;
+  height: 600px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+.swiper-slide:nth-child(1n) {
+  background-image: url("../assets/img3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-image: url("../assets/Bored-Ape-Yacht-Club-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-image: url("../assets/img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-image: url("../assets/polkadot.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-image: url("../assets/img3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-image: url("../assets/img4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-image: url("../assets/img1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-image: url("../assets/manwithbeard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-gradient {
+  background: #0052d4; /* fallback for old browsers */
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background: -webkit-linear-gradient(
+    to right,
+    #6fb1fc,
+    #4364f7,
+    #0052d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6fb1fc,
+    #4364f7,
+    #0052d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.bg-blue-gradient {
+  position: relative;
+  top: -40px;
+  left: 0;
+}
+
+.my-violetcard {
+  background-color: #e5e6f0;
+}
+
+.left-card {
+  background-image: url("../assets/multichain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.main-card {
+  background-color: white;
+  height: 500px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 20px;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.bg-black {
+  background-color: #d6efd8;
+}
+
+.aicard {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.7px);
+  -webkit-backdrop-filter: blur(13.7px);
+  border: 1px solid rgba(255, 255, 255, 0.67);
+  width: 80%;
+  height: 600px;
+}
+
+.widthandcenter {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.box-shadow {
+  border-radius: 8px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.message-box {
+  line-height: 30px;
+  width: 95%;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow:
+    rgba(101, 99, 99, 0.16) 0px 10px 36px 0px,
+    rgba(114, 113, 113, 0.06) 0px 0px 0px 1px;
+  max-height: 200px;
+}
+
+.message-box::-webkit-scrollbar {
+  display: none;
+}
+
+.bg-violet {
+  background-color: #7776b3a9;
+}
